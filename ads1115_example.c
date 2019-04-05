@@ -1,10 +1,8 @@
 /*
  ============================================================================
- Name        : ads1115.c
+ Name        : ads1115_example.c
  Author      : Giovanni Bauermeister
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Read analog values from potentiometer using ADS1115 and prints to terminal
  ============================================================================
  */
 
