@@ -1,8 +1,8 @@
-[![Portal Embarcados](https://www.embarcados.com.br/wp-content/uploads/2016/04/logo-380x124.png)](https://www.embarcados.com.br)
+<img src="https://www.embarcados.com.br/wp-content/uploads/2016/04/logo-380x124.png" width="266" height="87" href="https://www.embarcados.com.br">
 
-# Analog to digital converter ADS1115 with Raspberry Pi
+## Analog to digital converter ADS1115 with Raspberry Pi
 
-![ADS1115](https://www.embarcados.com.br/wp-content/uploads/2019/04/capa-artigo-696x418.png)
+<img src="https://www.embarcados.com.br/wp-content/uploads/2019/04/capa-artigo-696x418.png" width="556" height="334" href="https://www.embarcados.com.br">
 
 #### Go to full tutorial in portuguese about ADS1115 at <span style="color:#FF8000"></span>[Portal Embarcados](https://www.embarcados.com.br/raspberry-pi-e-ads1115/) and learn how to use ADS1115 with Raspberry Pi and C language.
 
