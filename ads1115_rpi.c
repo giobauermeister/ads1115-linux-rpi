@@ -54,7 +54,7 @@ float readVoltage(int channel)
 	config = 	CONFIG_REG_OS_SINGLE		|
 				CONFIG_REG_PGA_4_096V 		|
 				CONFIG_REG_MODE_SINGLE 		|
-				CONFIG_REG_DR_128SPS 			|
+				CONFIG_REG_DR_128SPS 		|
 				CONFIG_REG_CMODE_TRAD 		|
 				CONFIG_REG_CPOL_ACTIV_LOW 	|
 				CONFIG_REG_CLATCH_NONLATCH 	|
@@ -66,7 +66,6 @@ float readVoltage(int channel)
 		writeBuf[1] = config >> 8;
 		writeBuf[2] = config & 0xFF;
 		write(i2cFile, writeBuf, 3);
-		usleep(25);
 	}
 
 	switch (channel) {
@@ -86,8 +85,11 @@ float readVoltage(int channel)
 			printf("Give a channel between 0-3\n");
 	}
 	configDevice(config);
-	usleep(135000);
-
+	
+	while (readBuf[0] >> 7 != 1) {
+        	read(i2cFile, readBuf, 2);
+        }
+	
 	writeBuf[0] = 0x00;
 	write(i2cFile, writeBuf, 1);
 
