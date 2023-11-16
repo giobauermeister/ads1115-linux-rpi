@@ -64,7 +64,7 @@ float readVoltage(int channel)
 	{
 		writeBuf[0] = 0x01;
 		writeBuf[1] = config >> 8;
-		writeBuf[2] = config && 0xFF;
+		writeBuf[2] = config & 0xFF;
 		write(i2cFile, writeBuf, 3);
 		usleep(25);
 	}
